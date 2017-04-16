@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Threading;
-using FaceMouse.ComputerVisionModule;
 using FaceMouse.MouseCaptureModule;
 
 namespace FaceMouse
@@ -26,8 +24,7 @@ namespace FaceMouse
 
         private void mouseCaptureButton_Click(object sender, EventArgs e)
         {
-            Point point = MouseIteraction.GetCursorPos();
-            MouseIteraction.SetCursorPos(point.X + 50, point.Y + 50);
+            ModuleController.ReMoveMouse();
         }
     }
 }

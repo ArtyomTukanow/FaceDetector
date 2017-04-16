@@ -2,9 +2,9 @@
 <module type="RIDER_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$/../..">
-      <sourceFolder url="file://$MODULE_DIR$/../../WindowsFormsApplication1" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../../WindowsFormsApplication1/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/../../WindowsFormsApplication1/obj" />
+      <sourceFolder url="file://$MODULE_DIR$/../../FaceMouse" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../FaceMouse/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../FaceMouse/obj" />
       <excludeFolder url="file://$MODULE_DIR$/../../packages" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />

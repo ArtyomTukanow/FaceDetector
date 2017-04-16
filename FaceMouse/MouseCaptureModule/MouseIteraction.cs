@@ -52,6 +52,10 @@ namespace FaceMouse.MouseCaptureModule
         {
             SetCursorPos(x, y);
         }
+        public static void MoveMouse(Point point)
+        {
+            SetCursorPos(point.X, point.Y);
+        }
 
         public static void SendMouseRightclick(Point p)
         {

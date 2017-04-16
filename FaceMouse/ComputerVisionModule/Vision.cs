@@ -31,8 +31,10 @@ namespace FaceMouse.ComputerVisionModule
         /// <summary>
         /// Распознает лицо с двумя глазами и одним носом
         /// </summary>
-        /// <returns>Возвращает вектор распознанных точек</returns>
-        public static void DetectFace()
+        /// <param name="eyeLeft">Центр левого глаза</param>
+        /// <param name="eyeRight">Центр правого глаза</param>
+        /// <param name="nose">Центр носа</param>
+        public static void DetectFace(ref Point eyeLeft, ref Point eyeRight, ref Point nose)
         {
             Rectangle[] rects = new Rectangle[3];
 
@@ -59,9 +61,9 @@ namespace FaceMouse.ComputerVisionModule
                     CvInvoke.Rectangle(currFrame, face, new Bgr(Color.Red).MCvScalar, 2);
 
                 Rectangle currNose = noses[0];
-                foreach (Rectangle nose in noses)
-                    if (currNose.Location.Y > nose.Location.Y)
-                        currNose = nose;
+                foreach (Rectangle noseRectangle in noses)
+                    if (currNose.Location.Y > noseRectangle.Location.Y)
+                        currNose = noseRectangle;
 
                 rects[0] = NewRectangle(currNose, 64, 64);
 
@@ -69,23 +71,39 @@ namespace FaceMouse.ComputerVisionModule
                     rects[i + 1] = NewRectangle(eyes[i], 64, 64);
                 break;
             }
+            nose = Center(rects[0]);
+            if (rects[1].X < rects[2].X)
+            {
+                var h = rects[1];
+                rects[1] = rects[2];
+                rects[2] = h;
+            }
+            eyeLeft = Center(rects[1]);
+            eyeRight = Center(rects[2]);
             VectorOfRect = new VectorOfRect(rects);
         }
 
         /// <summary>
         /// Возвращает изображение с точками отслеживания
         /// </summary>
-        /// <returns></returns>
-        public static Bitmap TrackeFace()
+        /// <param name="eyeLeft">Центр левого глаза</param>
+        /// <param name="eyeRight">Центр правого глаза</param>
+        /// <param name="nose">Центр носа</param>
+        /// <returns>Возвращает изображение</returns>
+        public static Bitmap TrackeFace(ref Point eyeLeft, ref Point eyeRight, ref Point nose)
         {
             lock (VectorOfRect)
             {
                 IImage currFrame = Capture.QueryFrame().ToImage<Bgr, Byte>();
                 _tracker.Update(Capture.QueryFrame(), VectorOfRect);
-                foreach (Rectangle rect in VectorOfRect.ToArray())
+                Rectangle[] rects = VectorOfRect.ToArray();
+                foreach (Rectangle rect in rects)
                 {
                     CvInvoke.Rectangle(currFrame, NewRectangle(rect,4,4), new Bgr(Color.Green).MCvScalar, 2);
                 }
+                nose = Center(rects[0]);
+                eyeLeft = Center(rects[1]);
+                eyeRight = Center(rects[2]);
                 return currFrame.Bitmap;
             }
         }
