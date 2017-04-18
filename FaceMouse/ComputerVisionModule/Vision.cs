@@ -94,48 +94,48 @@ namespace FaceMouse.ComputerVisionModule
         /// <returns>Возвращает изображение</returns>
         public static Bitmap TrackeFace(ref Point eyeLeft, ref Point eyeRight, ref Point nose, ref ClickStatus click)
         {
-            lock (VectorOfRect)
+            lock (_vectorOfRect)
             {
                 IImage currFrame = Capture.QueryFrame().ToImage<Bgr, Byte>();
                 Image<Bgr, Byte> currFrameImg = Capture.QueryFrame().ToImage<Bgr, Byte>();
-                _tracker.Update(Capture.QueryFrame(), VectorOfRect);
-                Rectangle[] rects = VectorOfRect.ToArray();
+                _tracker.Update(Capture.QueryFrame(), _vectorOfRect);
+                Rectangle[] rects = _vectorOfRect.ToArray();
                 nose = Center(rects[0]);
-                //eyeLeft = Center(rects[1]);
-                //eyeRight = Center(rects[2]);
+                eyeLeft = Center(rects[1]);
+                eyeRight = Center(rects[2]);
 
-                //List<Rectangle> detectedLeftEyes = new List<Rectangle>();
-                //long detectionTime;
-                //EyeDetector(currFrame, "haarcascade_one_eye.xml", NewRectangle(eyeLeft, 64, 64), detectedLeftEyes, out detectionTime);
+                List<Rectangle> detectedLeftEyes = new List<Rectangle>();
+                long detectionTime;
+                EyeDetector(currFrame, "haarcascade_one_eye.xml", NewRectangle(eyeLeft, 64, 64), detectedLeftEyes, out detectionTime);
 
-                //List<Rectangle> detectedRightEyes = new List<Rectangle>();
-                //long detectionTime2;
-                //EyeDetector(currFrame, "haarcascade_one_eye.xml", NewRectangle(eyeRight, 64, 64), detectedRightEyes, out detectionTime2);
+                List<Rectangle> detectedRightEyes = new List<Rectangle>();
+                long detectionTime2;
+                EyeDetector(currFrame, "haarcascade_one_eye.xml", NewRectangle(eyeRight, 64, 64), detectedRightEyes, out detectionTime2);
 
-                //foreach (Rectangle eye in detectedLeftEyes)
-                //    CvInvoke.Rectangle(currFrame, eye, new Bgr(Color.Red).MCvScalar, 2);
-                //foreach (Rectangle eye in detectedRightEyes)
-                //    CvInvoke.Rectangle(currFrame, eye, new Bgr(Color.Blue).MCvScalar, 2);
+                foreach (Rectangle eye in detectedLeftEyes)
+                    CvInvoke.Rectangle(currFrame, eye, new Bgr(Color.Red).MCvScalar, 2);
+                foreach (Rectangle eye in detectedRightEyes)
+                    CvInvoke.Rectangle(currFrame, eye, new Bgr(Color.Blue).MCvScalar, 2);
 
                 foreach (Rectangle rect in rects)
                     CvInvoke.Rectangle(currFrame, NewRectangle(rect, 4, 4), new Bgr(Color.Green).MCvScalar, 2);
 
-                //if (detectedLeftEyes.Count == 0 && detectedRightEyes.Count == 0)
-                //{
-                //    click = ClickStatus.doubleLeft;
-                //}
-                //else if (detectedLeftEyes.Count == 0)
-                //{
-                //    click = ClickStatus.left;
-                //}
-                //else if (detectedRightEyes.Count == 0)
-                //{
-                //    click = ClickStatus.right;
-                //}
-                //else
-                //{
-                //    click = ClickStatus.none;
-                //}
+                if (detectedLeftEyes.Count == 0 && detectedRightEyes.Count == 0)
+                {
+                    click = ClickStatus.doubleLeft;
+                }
+                else if (detectedLeftEyes.Count == 0)
+                {
+                    click = ClickStatus.left;
+                }
+                else if (detectedRightEyes.Count == 0)
+                {
+                    click = ClickStatus.right;
+                }
+                else
+                {
+                    click = ClickStatus.none;
+                }
 
                 return currFrame.Bitmap;
             }

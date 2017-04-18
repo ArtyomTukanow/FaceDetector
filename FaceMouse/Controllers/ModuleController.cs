@@ -84,9 +84,9 @@ namespace FaceMouse.Controllers
                     Point currMousePoint = MouseIteraction.GetCursorPos();
                     Point mouseDirr = MouseCapture.GetCurrentDirrection();
                     if(Math.Abs(mouseDirr.X) > 1)
-                        currMousePoint.X += (mouseDirr.X - 1);
+                        currMousePoint.X += mouseDirr.X;
                     if (Math.Abs(mouseDirr.Y) > 1)
-                        currMousePoint.Y += (mouseDirr.Y - 1);
+                        currMousePoint.Y += mouseDirr.Y;
                     MouseIteraction.MoveMouse(currMousePoint);
                     switch (_click)
                     {
