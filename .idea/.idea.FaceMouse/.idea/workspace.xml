@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf52a74e-9bd4-4b85-911b-b64705dd02bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.FaceMouse/.idea/contentModel.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.FaceMouse/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.FaceMouse/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.FaceMouse/riderModule.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.idea.WindowsFormsApplication1/.idea/contentModel.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.idea.WindowsFormsApplication1/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.idea.WindowsFormsApplication1/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.idea.WindowsFormsApplication1/riderModule.iml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse.v12.suo" afterPath="$PROJECT_DIR$/FaceMouse.v12.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterPath="$PROJECT_DIR$/FaceMouse/obj/Debug/DesignTimeResolveAssemblyReferences.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/FaceMouse/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/obj/Debug/FaceMouse.exe" afterPath="$PROJECT_DIR$/FaceMouse/obj/Debug/FaceMouse.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/obj/Debug/FaceMouse.pdb" afterPath="$PROJECT_DIR$/FaceMouse/obj/Debug/FaceMouse.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.FaceMouse/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.FaceMouse/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Detection.cs" afterPath="$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Detection.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Vision.cs" afterPath="$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Vision.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/Form1.cs" afterPath="$PROJECT_DIR$/FaceMouse/Form1.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/FaceMouse.csproj" afterPath="$PROJECT_DIR$/FaceMouse/FaceMouse.csproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/ModuleController.cs" afterPath="$PROJECT_DIR$/FaceMouse/ModuleController.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/MouseCaptureModule/MouseCapture.cs" afterPath="$PROJECT_DIR$/FaceMouse/MouseCaptureModule/MouseCapture.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/MouseCaptureModule/MouseIteraction.cs" afterPath="$PROJECT_DIR$/FaceMouse/MouseCaptureModule/MouseIteraction.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceMouse/obj/Debug/FaceMouse.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/FaceMouse/obj/Debug/FaceMouse.csproj.FileListAbsolute.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,21 +22,112 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ModuleController.cs" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ModuleController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FaceMouse/ModuleController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="418">
+              <caret line="57" column="56" lean-forward="false" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
               <folding>
-                <marker date="1492372253693" expanded="true" signature="6:119" ph="..." />
-                <marker date="1492372253693" expanded="true" signature="140:2424" ph="{...}" />
-                <marker date="1492372253693" expanded="true" signature="176:2422" ph="{...}" />
-                <marker date="1492372253693" expanded="true" signature="354:539" ph="{...}" />
-                <marker date="1492372253693" expanded="true" signature="576:716" ph="{...}" />
-                <marker date="1492372253693" expanded="true" signature="2002:2406" ph="{...}" />
-                <marker date="1492372253693" expanded="true" signature="2002:2416" ph="{...}" />
-                <marker date="1492372253693" expanded="true" signature="2037:2392" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="6:133" ph="..." />
+                <marker date="1492455718812" expanded="true" signature="154:3390" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="190:3388" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="368:553" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="590:730" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="772:927" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="962:1064" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="1154:1723" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="1189:1723" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="1366:1587" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="1608:1723" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="3340:3358" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="3340:3372" ph="{...}" />
+                <marker date="1492455718812" expanded="true" signature="3340:3382" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Detection.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Detection.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="215" column="51" lean-forward="false" selection-start-line="215" selection-start-column="51" selection-end-line="215" selection-end-column="51" />
+              <folding>
+                <marker date="1492451760357" expanded="false" signature="0:234" ph="/* ---------------------------------------------------------------------------- ... */" />
+                <marker date="1492451760357" expanded="false" signature="242:420" ph="..." />
+                <marker date="1492451760357" expanded="true" signature="469:12029" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="502:12027" ph="{...}" />
+                <marker date="1492451760357" expanded="false" signature="746:6574" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="841:6566" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="964:3818" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="1252:3804" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="1953:3755" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="2208:3735" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="2317:3712" ph="{...}" />
+                <marker date="1492451760357" expanded="false" signature="2371:2488" ph="/* For some reason a clone is required. ... */" />
+                <marker date="1492451760357" expanded="false" signature="2714:3686" ph="{...}" />
+                <marker date="1492451760357" expanded="false" signature="2962:3193" ph="{...}" />
+                <marker date="1492451760357" expanded="false" signature="3419:3657" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="3842:6500" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="4152:6486" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="4268:6437" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="4549:4819" ph="/* FaceDetector the faces  from the gray scale eyeImage and store the locations as rectangle ... */" />
+                <marker date="1492451760357" expanded="true" signature="5136:6417" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="5294:6394" ph="{...}" />
+                <marker date="1492451760357" expanded="false" signature="5622:5838" ph="{...}" />
+                <marker date="1492451760357" expanded="false" signature="6145:6368" ph="{...}" />
+                <marker date="1492451760357" expanded="false" signature="6747:8808" ph="{...}" />
+                <marker date="1492451760357" expanded="false" signature="6850:8799" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="6978:7884" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="7089:7867" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="7562:7809" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="7911:8728" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="8014:8711" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="8144:8653" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="8992:12022" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="9092:12013" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="9220:10828" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="9331:10811" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="9801:10753" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="9926:10728" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="10118:10699" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="10385:10666" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="10855:11942" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="10958:11925" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="11088:11867" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="11361:11842" ph="{...}" />
+                <marker date="1492451760357" expanded="true" signature="11552:11813" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vision.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Vision.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding>
+                <marker date="1492455047382" expanded="true" signature="6:189" ph="..." />
+                <marker date="1492455047382" expanded="true" signature="231:6189" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="265:6187" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="484:836" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="510:784" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="846:1114" ph="/// Распознает лицо с двумя глазами и одним носом ... " />
+                <marker date="1492455047382" expanded="true" signature="1207:2929" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="1293:2579" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="2657:2786" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="2939:3261" ph="/// Возвращает изображение с точками отслеживания ... " />
+                <marker date="1492455047382" expanded="true" signature="3379:5437" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="4906:4994" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="5048:5130" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="5185:5268" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="5289:5371" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="5499:5616" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="5688:5779" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="5870:5989" ph="{...}" />
+                <marker date="1492455047382" expanded="true" signature="6073:6181" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -57,6 +139,8 @@
     <findStrings>
       <find>Angle</find>
       <find>Set</find>
+      <find>DetectMultiScale</find>
+      <find>UMat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -69,6 +153,8 @@
         <option value="$PROJECT_DIR$/FaceMouse/MouseCaptureModule/MouseIteraction.cs" />
         <option value="$PROJECT_DIR$/FaceMouse/Form1.cs" />
         <option value="$PROJECT_DIR$/FaceMouse/ModuleController.cs" />
+        <option value="$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Detection.cs" />
+        <option value="$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Vision.cs" />
       </list>
     </option>
   </component>
@@ -112,24 +198,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="FaceMouse" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FaceMouse (1 project)" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FaceMouse" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MouseCaptureModule" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -195,6 +263,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -231,11 +305,12 @@
       <option name="presentableId" value="Default" />
       <updated>1492368655338</updated>
       <workItem from="1492368661541" duration="3183000" />
+      <workItem from="1492445954903" duration="6296000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3183000" />
+    <option name="totallyTimeSpent" value="9479000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -247,31 +322,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25416037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -286,57 +361,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Vision.cs">
+    <entry file="file://$PROJECT_DIR$/FaceMouse/ModuleController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <marker date="1492372027798" expanded="true" signature="6:153" ph="..." />
-            <marker date="1492372027798" expanded="true" signature="195:4528" ph="{...}" />
-            <marker date="1492372027798" expanded="true" signature="229:4526" ph="{...}" />
-            <marker date="1492372027798" expanded="true" signature="448:800" ph="{...}" />
-            <marker date="1492372027798" expanded="true" signature="474:748" ph="{...}" />
-            <marker date="1492372027798" expanded="true" signature="810:918" ph="/// Распознает лицо с двумя глазами и одним носом ... " />
-            <marker date="1492372027798" expanded="true" signature="1012:2413" ph="{...}" />
-            <marker date="1492372027798" expanded="true" signature="1098:2351" ph="{...}" />
-            <marker date="1492372027798" expanded="true" signature="2423:2549" ph="/// Возвращает изображение с точками отслеживания ... " />
-            <marker date="1492372027798" expanded="true" signature="3903:3968" ph="{...}" />
-            <marker date="1492372027798" expanded="true" signature="2861:3007" ph="{...}" />
-            <marker date="1492372027798" expanded="true" signature="4030:4147" ph="{...}" />
-            <marker date="1492372027798" expanded="true" signature="4219:4310" ph="{...}" />
-            <marker date="1492372027798" expanded="true" signature="4401:4520" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Detection.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1492367923402" expanded="true" signature="0:234" ph="/* ---------------------------------------------------------------------------- ... */" />
-            <marker date="1492367923402" expanded="true" signature="242:420" ph="..." />
-            <marker date="1492367923402" expanded="true" signature="469:6563" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="502:6561" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="740:6556" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="835:6548" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="958:3812" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="1246:3798" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="1947:3749" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="2202:3729" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="2311:3706" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="2365:2482" ph="/* For some reason a clone is required. ... */" />
-            <marker date="1492367923402" expanded="true" signature="2708:3680" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="2956:3187" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="3413:3651" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="3836:6482" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="4146:6468" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="4262:6419" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="4540:4801" ph="/* Detect the faces  from the gray scale image and store the locations as rectangle ... */" />
-            <marker date="1492367923402" expanded="true" signature="5118:6399" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="5276:6376" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="5604:5820" ph="{...}" />
-            <marker date="1492367923402" expanded="true" signature="6127:6350" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="6:133" ph="..." />
+            <marker date="1492455718812" expanded="true" signature="154:3390" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="190:3388" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="368:553" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="590:730" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="772:927" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="962:1064" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="1154:1723" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="1189:1723" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="1366:1587" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="1608:1723" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="3340:3358" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="3340:3372" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="3340:3382" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -345,15 +388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
-          <folding>
-            <marker date="1492372208071" expanded="true" signature="6:35" ph="..." />
-            <marker date="1492372208071" expanded="true" signature="75:1992" ph="{...}" />
-            <marker date="1492372208071" expanded="true" signature="107:1990" ph="{...}" />
-            <marker date="1492372208071" expanded="true" signature="724:1034" ph="{...}" />
-            <marker date="1492372208071" expanded="true" signature="1120:1332" ph="{...}" />
-            <marker date="1492372208071" expanded="true" signature="1384:1572" ph="{...}" />
-            <marker date="1492372208071" expanded="true" signature="1648:1984" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -361,22 +395,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Detection.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="215" column="51" lean-forward="false" selection-start-line="215" selection-start-column="51" selection-end-line="215" selection-end-column="51" />
           <folding>
-            <marker date="1492370924049" expanded="true" signature="6:83" ph="..." />
-            <marker date="1492370924049" expanded="true" signature="123:2772" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="158:2770" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="659:770" ph="/// Not sure if we're just supposed to create our own point class. ... " />
-            <marker date="1492370924049" expanded="true" signature="791:967" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="889:957" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="1011:1131" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="1409:1509" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="1562:1614" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="1664:1728" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="1785:1903" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="1961:2206" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="2269:2518" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="2562:2643" ph="{...}" />
-            <marker date="1492370924049" expanded="true" signature="2685:2764" ph="{...}" />
+            <marker date="1492451760357" expanded="false" signature="0:234" ph="/* ---------------------------------------------------------------------------- ... */" />
+            <marker date="1492451760357" expanded="false" signature="242:420" ph="..." />
+            <marker date="1492451760357" expanded="true" signature="469:12029" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="502:12027" ph="{...}" />
+            <marker date="1492451760357" expanded="false" signature="746:6574" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="841:6566" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="964:3818" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="1252:3804" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="1953:3755" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="2208:3735" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="2317:3712" ph="{...}" />
+            <marker date="1492451760357" expanded="false" signature="2371:2488" ph="/* For some reason a clone is required. ... */" />
+            <marker date="1492451760357" expanded="false" signature="2714:3686" ph="{...}" />
+            <marker date="1492451760357" expanded="false" signature="2962:3193" ph="{...}" />
+            <marker date="1492451760357" expanded="false" signature="3419:3657" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="3842:6500" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="4152:6486" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="4268:6437" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="4549:4819" ph="/* FaceDetector the faces  from the gray scale eyeImage and store the locations as rectangle ... */" />
+            <marker date="1492451760357" expanded="true" signature="5136:6417" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="5294:6394" ph="{...}" />
+            <marker date="1492451760357" expanded="false" signature="5622:5838" ph="{...}" />
+            <marker date="1492451760357" expanded="false" signature="6145:6368" ph="{...}" />
+            <marker date="1492451760357" expanded="false" signature="6747:8808" ph="{...}" />
+            <marker date="1492451760357" expanded="false" signature="6850:8799" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="6978:7884" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="7089:7867" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="7562:7809" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="7911:8728" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="8014:8711" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="8144:8653" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="8992:12022" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="9092:12013" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="9220:10828" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="9331:10811" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="9801:10753" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="9926:10728" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="10118:10699" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="10385:10666" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="10855:11942" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="10958:11925" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="11088:11867" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="11361:11842" ph="{...}" />
+            <marker date="1492451760357" expanded="true" signature="11552:11813" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -384,7 +454,7 @@
     <entry file="file://$PROJECT_DIR$/FaceMouse/Form1.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
             <marker date="1492371320872" expanded="true" signature="6:99" ph="..." />
             <marker date="1492371320872" expanded="true" signature="120:655" ph="{...}" />
@@ -399,17 +469,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FaceMouse/ModuleController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="418">
+          <caret line="57" column="56" lean-forward="false" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
           <folding>
-            <marker date="1492372253693" expanded="true" signature="6:119" ph="..." />
-            <marker date="1492372253693" expanded="true" signature="140:2424" ph="{...}" />
-            <marker date="1492372253693" expanded="true" signature="176:2422" ph="{...}" />
-            <marker date="1492372253693" expanded="true" signature="354:539" ph="{...}" />
-            <marker date="1492372253693" expanded="true" signature="576:716" ph="{...}" />
-            <marker date="1492372253693" expanded="true" signature="2002:2406" ph="{...}" />
-            <marker date="1492372253693" expanded="true" signature="2002:2416" ph="{...}" />
-            <marker date="1492372253693" expanded="true" signature="2037:2392" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="6:133" ph="..." />
+            <marker date="1492455718812" expanded="true" signature="154:3390" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="190:3388" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="368:553" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="590:730" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="772:927" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="962:1064" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="1154:1723" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="1189:1723" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="1366:1587" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="1608:1723" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="3340:3358" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="3340:3372" ph="{...}" />
+            <marker date="1492455718812" expanded="true" signature="3340:3382" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FaceMouse/ComputerVisionModule/Vision.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding>
+            <marker date="1492455047382" expanded="true" signature="6:189" ph="..." />
+            <marker date="1492455047382" expanded="true" signature="231:6189" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="265:6187" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="484:836" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="510:784" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="846:1114" ph="/// Распознает лицо с двумя глазами и одним носом ... " />
+            <marker date="1492455047382" expanded="true" signature="1207:2929" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="1293:2579" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="2657:2786" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="2939:3261" ph="/// Возвращает изображение с точками отслеживания ... " />
+            <marker date="1492455047382" expanded="true" signature="3379:5437" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="4906:4994" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="5048:5130" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="5185:5268" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="5289:5371" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="5499:5616" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="5688:5779" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="5870:5989" ph="{...}" />
+            <marker date="1492455047382" expanded="true" signature="6073:6181" ph="{...}" />
           </folding>
         </state>
       </provider>

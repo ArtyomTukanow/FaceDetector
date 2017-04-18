@@ -5,6 +5,8 @@ using Emgu.CV;
 using Emgu.CV.Structure;
 using Emgu.CV.Tracking;
 using Emgu.CV.Util;
+using FaceMouse.MouseCaptureModule;
+using FaceMouse.Controllers;
 
 namespace FaceMouse.ComputerVisionModule
 {
@@ -47,7 +49,7 @@ namespace FaceMouse.ComputerVisionModule
                 List<Rectangle> eyes = new List<Rectangle>();
                 List<Rectangle> noses = new List<Rectangle>();
 
-                Detect(
+                FaceDetector(
                     currFrame, "haarcascade_frontalface_default.xml", "haarcascade_eye.xml", "Nariz.xml",
                     faces, eyes, noses,
                     out detectionTime);
@@ -67,7 +69,7 @@ namespace FaceMouse.ComputerVisionModule
 
                 rects[0] = NewRectangle(currNose, 64, 64);
 
-                for (int i = 0; i < 2; i ++)
+                for (int i = 0; i < 2; i++)
                     rects[i + 1] = NewRectangle(eyes[i], 64, 64);
                 break;
             }
@@ -90,20 +92,51 @@ namespace FaceMouse.ComputerVisionModule
         /// <param name="eyeRight">Центр правого глаза</param>
         /// <param name="nose">Центр носа</param>
         /// <returns>Возвращает изображение</returns>
-        public static Bitmap TrackeFace(ref Point eyeLeft, ref Point eyeRight, ref Point nose)
+        public static Bitmap TrackeFace(ref Point eyeLeft, ref Point eyeRight, ref Point nose, ref ClickStatus click)
         {
             lock (VectorOfRect)
             {
                 IImage currFrame = Capture.QueryFrame().ToImage<Bgr, Byte>();
+                Image<Bgr, Byte> currFrameImg = Capture.QueryFrame().ToImage<Bgr, Byte>();
                 _tracker.Update(Capture.QueryFrame(), VectorOfRect);
                 Rectangle[] rects = VectorOfRect.ToArray();
-                foreach (Rectangle rect in rects)
-                {
-                    CvInvoke.Rectangle(currFrame, NewRectangle(rect,4,4), new Bgr(Color.Green).MCvScalar, 2);
-                }
                 nose = Center(rects[0]);
-                eyeLeft = Center(rects[1]);
-                eyeRight = Center(rects[2]);
+                //eyeLeft = Center(rects[1]);
+                //eyeRight = Center(rects[2]);
+
+                //List<Rectangle> detectedLeftEyes = new List<Rectangle>();
+                //long detectionTime;
+                //EyeDetector(currFrame, "haarcascade_one_eye.xml", NewRectangle(eyeLeft, 64, 64), detectedLeftEyes, out detectionTime);
+
+                //List<Rectangle> detectedRightEyes = new List<Rectangle>();
+                //long detectionTime2;
+                //EyeDetector(currFrame, "haarcascade_one_eye.xml", NewRectangle(eyeRight, 64, 64), detectedRightEyes, out detectionTime2);
+
+                //foreach (Rectangle eye in detectedLeftEyes)
+                //    CvInvoke.Rectangle(currFrame, eye, new Bgr(Color.Red).MCvScalar, 2);
+                //foreach (Rectangle eye in detectedRightEyes)
+                //    CvInvoke.Rectangle(currFrame, eye, new Bgr(Color.Blue).MCvScalar, 2);
+
+                foreach (Rectangle rect in rects)
+                    CvInvoke.Rectangle(currFrame, NewRectangle(rect, 4, 4), new Bgr(Color.Green).MCvScalar, 2);
+
+                //if (detectedLeftEyes.Count == 0 && detectedRightEyes.Count == 0)
+                //{
+                //    click = ClickStatus.doubleLeft;
+                //}
+                //else if (detectedLeftEyes.Count == 0)
+                //{
+                //    click = ClickStatus.left;
+                //}
+                //else if (detectedRightEyes.Count == 0)
+                //{
+                //    click = ClickStatus.right;
+                //}
+                //else
+                //{
+                //    click = ClickStatus.none;
+                //}
+
                 return currFrame.Bitmap;
             }
         }
@@ -125,6 +158,11 @@ namespace FaceMouse.ComputerVisionModule
         private static Rectangle NewRectangle(Rectangle rectangle, int width, int height)
         {
             return new Rectangle(Left(Center(rectangle), width, height), new Size(width, height));
+        }
+
+        private static Rectangle NewRectangle(Point center, int width, int height)
+        {
+            return new Rectangle(Left(center, width, height), new Size(width, height));
         }
     }
 }

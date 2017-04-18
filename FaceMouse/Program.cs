@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FaceMouse.Controllers;
+using System;
 using System.Windows.Forms;
 
 namespace FaceMouse
@@ -14,6 +15,7 @@ namespace FaceMouse
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ModuleController.Start();
+            FPSController.Start();
             Application.Run(ModuleController.Form);
         }
     }

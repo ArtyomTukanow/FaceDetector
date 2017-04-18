@@ -41,42 +41,36 @@ namespace FaceMouse.MouseCaptureModule
         private const int MOUSEEVENTF_RIGHTDOWN = 0x08;
         private const int MOUSEEVENTF_RIGHTUP = 0x10;
 
-
-        public static void DoMouseClick(long x, long y)
+        public static void DoMouseClick()
         {
-            mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, x, y, 0, 0);
+            Point p = GetCursorPos();
+            mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, p.X, p.Y, 0, 0);
         }
 
-
-        public static void MoveMouse(int x, int y)
-        {
-            SetCursorPos(x, y);
-        }
         public static void MoveMouse(Point point)
         {
             SetCursorPos(point.X, point.Y);
         }
 
-        public static void SendMouseRightclick(Point p)
+        public static void SendMouseRightclick()
         {
+            Point p = GetCursorPos();
             mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, (uint)p.X, (uint)p.Y, 0, 0);
         }
 
-        public static void SendMouseDoubleClick(Point p)
+        public static void SendMouseDoubleClick()
         {
+            Point p = GetCursorPos();
             mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, (uint)p.X, (uint)p.Y, 0, 0);
-
             Thread.Sleep(150);
-
             mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, (uint)p.X, (uint)p.Y, 0, 0);
         }
 
-        public static void SendMouseRightDoubleClick(Point p)
+        public static void SendMouseRightDoubleClick()
         {
+            Point p = GetCursorPos();
             mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, (uint)p.X, (uint)p.Y, 0, 0);
-
             Thread.Sleep(150);
-
             mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, (uint)p.X, (uint)p.Y, 0, 0);
         }
 

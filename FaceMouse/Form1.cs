@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using FaceMouse.MouseCaptureModule;
+using FaceMouse.Controllers;
 
 namespace FaceMouse
 {
@@ -15,6 +16,7 @@ namespace FaceMouse
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             ModuleController.Exit();
+            FPSController.Exit();
         }
 
         private void DetectButton_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace FaceMouse
 
         private void mouseCaptureButton_Click(object sender, EventArgs e)
         {
-            ModuleController.ReMoveMouse();
+            ModuleController.CaptureMouse();
         }
     }
 }

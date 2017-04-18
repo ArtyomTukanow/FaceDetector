@@ -31,6 +31,7 @@
             this.cameraBox = new System.Windows.Forms.PictureBox();
             this.detectFaceButton = new System.Windows.Forms.Button();
             this.mouseCaptureButton = new System.Windows.Forms.Button();
+            this.fpsText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,11 +64,23 @@
             this.mouseCaptureButton.UseVisualStyleBackColor = true;
             this.mouseCaptureButton.Click += new System.EventHandler(this.mouseCaptureButton_Click);
             // 
+            // fpsText
+            // 
+            this.fpsText.AutoSize = true;
+            this.fpsText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.fpsText.ForeColor = System.Drawing.Color.DarkRed;
+            this.fpsText.Location = new System.Drawing.Point(13, 396);
+            this.fpsText.Name = "fpsText";
+            this.fpsText.Size = new System.Drawing.Size(66, 24);
+            this.fpsText.TabIndex = 4;
+            this.fpsText.Text = "FPS: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 431);
+            this.Controls.Add(this.fpsText);
             this.Controls.Add(this.mouseCaptureButton);
             this.Controls.Add(this.detectFaceButton);
             this.Controls.Add(this.cameraBox);
@@ -76,6 +89,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,6 +98,7 @@
         public System.Windows.Forms.PictureBox cameraBox;
         private System.Windows.Forms.Button detectFaceButton;
         private System.Windows.Forms.Button mouseCaptureButton;
+        public System.Windows.Forms.Label fpsText;
     }
 }
 

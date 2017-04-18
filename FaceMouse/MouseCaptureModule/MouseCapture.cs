@@ -7,32 +7,26 @@ namespace FaceMouse.MouseCaptureModule
     {
         //Standart Angles
         private static double sEyeLeft;
-//        private static double sEyeRight;
         private static double sNose;
         //Current Angles
         private static double cEyeLeft;
-//        private static double cEyeRight;
         private static double cNose;
 
         private static double EyeLeftDif { get { return sEyeLeft - cEyeLeft; }}
-//        private static double EyeRightDif { get { return sEyeRight - cEyeRight; }}
         private static double NoseDif { get { return sNose - cNose; }}
 
         public static void SetTriangle(Point eyeLeft, Point eyeRight, Point nose)
         {
             sEyeLeft = AngleCalculate(nose, eyeLeft, eyeRight);
-//            sEyeRight = AngleCalculate(eyeLeft, eyeRight, nose);
             sNose = AngleCalculate(eyeRight, nose, eyeLeft);
 
             cEyeLeft = sEyeLeft;
-//            cEyeRight = sEyeRight;
             cNose = sNose;
         }
 
         public static void UpdateTriangle(Point eyeLeft, Point eyeRight, Point nose)
         {
             cEyeLeft = AngleCalculate(nose, eyeLeft, eyeRight);
-//            cEyeRight = AngleCalculate(eyeLeft, eyeRight, nose);
             cNose = AngleCalculate(eyeRight, nose, eyeLeft);
         }
 

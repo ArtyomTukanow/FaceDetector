@@ -73,13 +73,16 @@
   <ItemGroup>
     <Compile Include="ComputerVisionModule\Detection.cs" />
     <Compile Include="ComputerVisionModule\Vision.cs" />
+    <Compile Include="Controllers\FPSController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuleController.cs" />
+    <Compile Include="Controllers\ModuleController.cs" />
+    <Compile Include="MouseCaptureModule\ClickStatus.cs" />
+    <Compile Include="MouseCaptureModule\HotKey.cs" />
     <Compile Include="MouseCaptureModule\MouseCapture.cs" />
     <Compile Include="MouseCaptureModule\MouseIteraction.cs" />
     <Compile Include="Program.cs" />
