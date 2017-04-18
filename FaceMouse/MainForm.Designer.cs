@@ -1,6 +1,6 @@
 ﻿namespace FaceMouse
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Требуется переменная конструктора.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.cameraBox = new System.Windows.Forms.PictureBox();
             this.detectFaceButton = new System.Windows.Forms.Button();
             this.mouseCaptureButton = new System.Windows.Forms.Button();
@@ -75,7 +76,7 @@
             this.fpsText.TabIndex = 4;
             this.fpsText.Text = "FPS: 0";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,8 +85,9 @@
             this.Controls.Add(this.mouseCaptureButton);
             this.Controls.Add(this.detectFaceButton);
             this.Controls.Add(this.cameraBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainForm";
+            this.Text = "Face Mouse";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).EndInit();
             this.ResumeLayout(false);

@@ -59,9 +59,6 @@ namespace FaceMouse.ComputerVisionModule
                 if (noses.Count < 1 || eyes.Count != 2)
                     continue;
 
-                foreach (Rectangle face in faces)
-                    CvInvoke.Rectangle(currFrame, face, new Bgr(Color.Red).MCvScalar, 2);
-
                 Rectangle currNose = noses[0];
                 foreach (Rectangle noseRectangle in noses)
                     if (currNose.Location.Y > noseRectangle.Location.Y)
@@ -70,19 +67,21 @@ namespace FaceMouse.ComputerVisionModule
                 rects[0] = NewRectangle(currNose, 64, 64);
 
                 for (int i = 0; i < 2; i++)
-                    rects[i + 1] = NewRectangle(eyes[i], 64, 64);
+                    rects[i + 1] = NewRectangle(eyes[i], 32, 32);
+
+                nose = Center(rects[0]);
+                if (rects[1].X < rects[2].X)
+                {
+                    var h = rects[1];
+                    rects[1] = rects[2];
+                    rects[2] = h;
+                }
+                eyeLeft = Center(rects[1]);
+                eyeRight = Center(rects[2]);
+                VectorOfRect = new VectorOfRect(rects);
+
                 break;
             }
-            nose = Center(rects[0]);
-            if (rects[1].X < rects[2].X)
-            {
-                var h = rects[1];
-                rects[1] = rects[2];
-                rects[2] = h;
-            }
-            eyeLeft = Center(rects[1]);
-            eyeRight = Center(rects[2]);
-            VectorOfRect = new VectorOfRect(rects);
         }
 
         /// <summary>
@@ -92,12 +91,11 @@ namespace FaceMouse.ComputerVisionModule
         /// <param name="eyeRight">Центр правого глаза</param>
         /// <param name="nose">Центр носа</param>
         /// <returns>Возвращает изображение</returns>
-        public static Bitmap TrackeFace(ref Point eyeLeft, ref Point eyeRight, ref Point nose, ref ClickStatus click)
+        public static Image TrackeFace(ref Point eyeLeft, ref Point eyeRight, ref Point nose, ref ClickStatus click)
         {
             lock (_vectorOfRect)
             {
                 IImage currFrame = Capture.QueryFrame().ToImage<Bgr, Byte>();
-                Image<Bgr, Byte> currFrameImg = Capture.QueryFrame().ToImage<Bgr, Byte>();
                 _tracker.Update(Capture.QueryFrame(), _vectorOfRect);
                 Rectangle[] rects = _vectorOfRect.ToArray();
                 nose = Center(rects[0]);

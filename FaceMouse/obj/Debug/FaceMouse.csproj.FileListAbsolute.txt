@@ -47,8 +47,8 @@ C:\projects\FaceMouse\FaceMouse\bin\Debug\Emgu.CV.UI.xml
 C:\projects\FaceMouse\FaceMouse\bin\Debug\Emgu.CV.UI.GL.xml
 C:\projects\FaceMouse\FaceMouse\bin\Debug\Emgu.CV.World.xml
 C:\projects\FaceMouse\FaceMouse\obj\Debug\FaceMouse.csprojResolveAssemblyReference.cache
-C:\projects\FaceMouse\FaceMouse\obj\Debug\FaceMouse.Form1.resources
 C:\projects\FaceMouse\FaceMouse\obj\Debug\FaceMouse.Properties.Resources.resources
 C:\projects\FaceMouse\FaceMouse\obj\Debug\FaceMouse.csproj.GenerateResource.Cache
 C:\projects\FaceMouse\FaceMouse\obj\Debug\FaceMouse.exe
 C:\projects\FaceMouse\FaceMouse\obj\Debug\FaceMouse.pdb
+C:\projects\FaceMouse\FaceMouse\obj\Debug\FaceMouse.MainForm.resources

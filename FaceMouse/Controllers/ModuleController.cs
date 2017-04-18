@@ -9,13 +9,13 @@ namespace FaceMouse.Controllers
 {
     public class ModuleController
     {
-        public static Form1 Form;
+        public static MainForm Form;
         private static Thread _faceTrackingThread;
         private static Thread _mouseCaptureThread;
 
         public static void Start()
         {
-            Form = new Form1();
+            Form = new MainForm();
             _faceTrackingThread = new Thread(ComputerVisionThread);
             _mouseCaptureThread = new Thread(MouseCaptureTread);
 
@@ -60,6 +60,7 @@ namespace FaceMouse.Controllers
                     reDetect = false;
                     Vision.DetectFace(ref eyeLeft, ref eyeRight, ref nose);
                     MouseCapture.SetTriangle(eyeLeft, eyeRight, nose);
+                    MouseCapture.Position = MouseIteraction.GetCursorPos();
                 }
                 else
                 {
@@ -81,16 +82,18 @@ namespace FaceMouse.Controllers
 
                 if (isMouseMoving)
                 {
-                    Point currMousePoint = MouseIteraction.GetCursorPos();
-                    Point mouseDirr = MouseCapture.GetCurrentDirrection();
-                    if(Math.Abs(mouseDirr.X) > 1)
-                        currMousePoint.X += mouseDirr.X;
-                    if (Math.Abs(mouseDirr.Y) > 1)
-                        currMousePoint.Y += mouseDirr.Y;
-                    MouseIteraction.MoveMouse(currMousePoint);
+                    //Point currMousePoint = MouseIteraction.GetCursorPos();
+                    //Point mouseDirr = MouseCapture.GetCurrentDirrection();
+                    //if(Math.Abs(mouseDirr.X) > 1)
+                    //    currMousePoint.X += mouseDirr.X;
+                    //if (Math.Abs(mouseDirr.Y) > 1)
+                    //    currMousePoint.Y += mouseDirr.Y;
+                    //MouseIteraction.MoveMouse(currMousePoint);
                     switch (_click)
                     {
                         case ClickStatus.none:
+                            MouseCapture.UpdatePosition();
+                            MouseIteraction.MoveMouse(MouseCapture.Position);
                             break;
                         case ClickStatus.doubleLeft:
                             MouseIteraction.SendMouseDoubleClick();

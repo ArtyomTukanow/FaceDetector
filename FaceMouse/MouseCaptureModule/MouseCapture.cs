@@ -12,6 +12,59 @@ namespace FaceMouse.MouseCaptureModule
         private static double cEyeLeft;
         private static double cNose;
 
+        private static int screenWidth = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
+        private static int screenHeight = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
+        private static double _exactPosX;
+        private static double _exactPosY;
+        public static double exactPosX {
+            set 
+            {
+                if (value < 0) value = 0;
+                else if (value > screenWidth) value = screenWidth;
+                _exactPosX = value;
+            }
+            get
+            {
+                return _exactPosX;
+            }
+        }
+        public static double exactPosY
+        {
+            set
+            {
+                if (value < 0) value = 0;
+                else if (value > screenHeight) value = screenHeight;
+                _exactPosY = value;
+            }
+            get
+            {
+                return _exactPosY;
+            }
+        }
+
+        public static Point Position
+        {
+            set
+            {
+                exactPosX = value.X;
+                exactPosY = value.Y;
+            }
+            get
+            {
+                return new Point(Convert.ToInt32(exactPosX), Convert.ToInt32(exactPosY));
+            }
+        }
+
+
+        public static double Coef = 100;
+
+        public static void UpdatePosition()
+        {
+            exactPosY += NoseDif * Coef;
+            exactPosX += EyeLeftDif * Coef;
+        }
+
+
         private static double EyeLeftDif { get { return sEyeLeft - cEyeLeft; }}
         private static double NoseDif { get { return sNose - cNose; }}
 
@@ -28,14 +81,6 @@ namespace FaceMouse.MouseCaptureModule
         {
             cEyeLeft = AngleCalculate(nose, eyeLeft, eyeRight);
             cNose = AngleCalculate(eyeRight, nose, eyeLeft);
-        }
-
-        public static Point GetCurrentDirrection()
-        {
-            Point dirr = new Point();
-            dirr.Y = Convert.ToInt32(NoseDif*100);
-            dirr.X = Convert.ToInt32(EyeLeftDif*100);
-            return dirr;
         }
 
         private static double AngleCalculate(Point pL, Point pM, Point pR)
