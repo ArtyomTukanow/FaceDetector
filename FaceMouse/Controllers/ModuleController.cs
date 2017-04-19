@@ -4,6 +4,7 @@ using FaceMouse.ComputerVisionModule;
 using FaceMouse.MouseCaptureModule;
 using System;
 using System.Windows.Forms;
+using Emgu.CV.Structure;
 
 namespace FaceMouse.Controllers
 {
@@ -40,7 +41,6 @@ namespace FaceMouse.Controllers
 
         public static void CaptureMouse(object k = null, object e = null)
         {
-            Form.Activate();
             if (!_mouseCaptureThread.IsAlive)
                 _mouseCaptureThread.Start();
             isMouseMoving = !isMouseMoving;
@@ -60,7 +60,6 @@ namespace FaceMouse.Controllers
                     reDetect = false;
                     Vision.DetectFace(ref eyeLeft, ref eyeRight, ref nose);
                     MouseCapture.SetTriangle(eyeLeft, eyeRight, nose);
-                    MouseCapture.Position = MouseIteraction.GetCursorPos();
                 }
                 else
                 {
@@ -76,19 +75,13 @@ namespace FaceMouse.Controllers
         private static HotKey captureHotKey;
         private static void MouseCaptureTread()
         {
+            MouseCapture.Position = MouseIteraction.GetCursorPos();
             while (true)
             {
-                Thread.Sleep(40);
+                Thread.Sleep(20);
 
                 if (isMouseMoving)
                 {
-                    //Point currMousePoint = MouseIteraction.GetCursorPos();
-                    //Point mouseDirr = MouseCapture.GetCurrentDirrection();
-                    //if(Math.Abs(mouseDirr.X) > 1)
-                    //    currMousePoint.X += mouseDirr.X;
-                    //if (Math.Abs(mouseDirr.Y) > 1)
-                    //    currMousePoint.Y += mouseDirr.Y;
-                    //MouseIteraction.MoveMouse(currMousePoint);
                     switch (_click)
                     {
                         case ClickStatus.none:
@@ -108,6 +101,11 @@ namespace FaceMouse.Controllers
                             _click = ClickStatus.none;
                             break;
                     }
+                }
+                else
+                {
+                    MouseCapture.Position = MouseIteraction.GetCursorPos();
+                    _click = ClickStatus.none;
                 }
             }
         }

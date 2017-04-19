@@ -55,13 +55,10 @@ namespace FaceMouse.MouseCaptureModule
             }
         }
 
-
-        public static double Coef = 100;
-
         public static void UpdatePosition()
         {
-            exactPosY += NoseDif * Coef;
-            exactPosX += EyeLeftDif * Coef;
+            exactPosY += NoseDif * Settings.sensitivity;
+            exactPosX += EyeLeftDif * Settings.sensitivity;
         }
 
 

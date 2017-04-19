@@ -27,8 +27,12 @@ namespace FaceMouse.Controllers
         {
             while (true)
             {
-                ModuleController.Form.fpsText.Invoke((MethodInvoker)delegate { ModuleController.Form.fpsText.Text = "FPS: " + _frames; });
-                _frames = 0;
+                try
+                {
+                    ModuleController.Form.fpsText.Invoke((MethodInvoker)delegate { ModuleController.Form.fpsText.Text = "FPS: " + _frames; });
+                    _frames = 0;
+                }
+                catch { }
                 Thread.Sleep(1000);
             }
         }

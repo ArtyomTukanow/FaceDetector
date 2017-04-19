@@ -7,6 +7,7 @@ using Emgu.CV.Tracking;
 using Emgu.CV.Util;
 using FaceMouse.MouseCaptureModule;
 using FaceMouse.Controllers;
+using System.Windows.Forms;
 
 namespace FaceMouse.ComputerVisionModule
 {
@@ -95,38 +96,30 @@ namespace FaceMouse.ComputerVisionModule
         {
             lock (_vectorOfRect)
             {
-                IImage currFrame = Capture.QueryFrame().ToImage<Bgr, Byte>();
-                _tracker.Update(Capture.QueryFrame(), _vectorOfRect);
+                Mat imageMat = Capture.QueryFrame();
+                IImage currFrame = imageMat.ToImage<Bgr, Byte>();
+                _tracker.Update(imageMat, _vectorOfRect);
                 Rectangle[] rects = _vectorOfRect.ToArray();
                 nose = Center(rects[0]);
                 eyeLeft = Center(rects[1]);
                 eyeRight = Center(rects[2]);
 
-                List<Rectangle> detectedLeftEyes = new List<Rectangle>();
-                long detectionTime;
-                EyeDetector(currFrame, "haarcascade_one_eye.xml", NewRectangle(eyeLeft, 64, 64), detectedLeftEyes, out detectionTime);
-
-                List<Rectangle> detectedRightEyes = new List<Rectangle>();
-                long detectionTime2;
-                EyeDetector(currFrame, "haarcascade_one_eye.xml", NewRectangle(eyeRight, 64, 64), detectedRightEyes, out detectionTime2);
-
-                foreach (Rectangle eye in detectedLeftEyes)
-                    CvInvoke.Rectangle(currFrame, eye, new Bgr(Color.Red).MCvScalar, 2);
-                foreach (Rectangle eye in detectedRightEyes)
-                    CvInvoke.Rectangle(currFrame, eye, new Bgr(Color.Blue).MCvScalar, 2);
-
                 foreach (Rectangle rect in rects)
                     CvInvoke.Rectangle(currFrame, NewRectangle(rect, 4, 4), new Bgr(Color.Green).MCvScalar, 2);
 
-                if (detectedLeftEyes.Count == 0 && detectedRightEyes.Count == 0)
+                double leftEyeDiff = TrakeLeftEye(imageMat, NewRectangle(Center(rects[1]), 10, 10));
+                double rightEyeDiff = TrakeRightEye(imageMat, NewRectangle(Center(rects[2]), 10, 10));
+
+                if (leftEyeDiff > Settings.minDiff && rightEyeDiff > Settings.minDiff)
                 {
-                    click = ClickStatus.doubleLeft;
+                    //click = ClickStatus.doubleLeft;
+                    click = ClickStatus.none;
                 }
-                else if (detectedLeftEyes.Count == 0)
+                else if (leftEyeDiff > Settings.minDiff)
                 {
                     click = ClickStatus.left;
                 }
-                else if (detectedRightEyes.Count == 0)
+                else if (rightEyeDiff > Settings.minDiff)
                 {
                     click = ClickStatus.right;
                 }
@@ -138,7 +131,6 @@ namespace FaceMouse.ComputerVisionModule
                 return currFrame.Bitmap;
             }
         }
-
 
 
 
