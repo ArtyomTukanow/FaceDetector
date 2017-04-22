@@ -11,6 +11,12 @@ namespace FaceMouse
         public MainForm()
         {
             InitializeComponent();
+            FPSController.FpsRecalc += new FpsDelegate(delegate(int fps) {
+                fpsText.Invoke((MethodInvoker)delegate
+                {
+                    ModuleController.Form.fpsText.Text = "FPS: " + fps;
+                });
+            });
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

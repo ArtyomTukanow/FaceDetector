@@ -8,8 +8,11 @@ using System.Windows.Forms;
 
 namespace FaceMouse.Controllers
 {
+    delegate void FpsDelegate(int fps);
     class FPSController
     {
+        public static event FpsDelegate FpsRecalc;
+
         private static Thread _fpsTrackingThread;
 
         public static void Start() {
@@ -27,12 +30,8 @@ namespace FaceMouse.Controllers
         {
             while (true)
             {
-                try
-                {
-                    ModuleController.Form.fpsText.Invoke((MethodInvoker)delegate { ModuleController.Form.fpsText.Text = "FPS: " + _frames; });
-                    _frames = 0;
-                }
-                catch { }
+                FpsRecalc(_frames);
+                _frames = 0;
                 Thread.Sleep(1000);
             }
         }
